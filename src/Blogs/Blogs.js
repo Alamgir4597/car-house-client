@@ -14,7 +14,7 @@ const Blogs = () => {
                         3.JavaScript can run on any engine, including Firefox's Spider Monkey, Safari's JavaScript Core, and V8 (Google Chrome).
                     </p>
                 </div>
-                <div>
+                <div className='d-flex'>
                     <h3>Node.js</h3>
                     <p>
                         1.Node.js is a server-side scripting language. <br />
@@ -24,24 +24,34 @@ const Blogs = () => {
                 </div>
 
             </div>
-            <div>
+            <div className='d-flex'>
                 <h1>sql and nosql difference</h1>
-                <h3>Sql</h3>
-               
-                <p>1. Databases are categorized as Relational Database Management System (RDBMS).<br />
-                
-                </p>
+                <div>
+                    
+                    <h3>Sql</h3>
+
+                    <p>1. Databases are categorized as Relational Database Management System (RDBMS).<br />
+                       2. As we already know SQL uses structured query language for its CRUD operation which is defined as SQL. <br/>
+                        3.SQL dbs is implemented in both open source and commercial Database such as like Postgres & MySQL as open source and Oracle and Sqlite as commercial.
+
+
+                    </p>
+                </div>
+                <div>
+                    <h3>NoSql</h3>
+
+                    <p>1.While NOSQL database is known as non-relational or distributed database.<br />
+                        2. oSQL database on other hand has dynamic schema for unstructured data.Data stored in this type of database is not structured and could be stored in either of forms such as document. <br />
+                        3.On other hand NOSQL is purely open source and MongoDB, BigTable, Redis, RavenDB.
+
+
+                    </p>
+                </div>
             </div>
             <div>
-                <h1>What other services does firebase provide other than authentication</h1>
+                <h1>What is purpose of jwt</h1>
                 <p>
-                    1. Authentication<br />
-                    2. Firestore Database <br/>
-                    3.Realtime Database<br />
-                   4 .Storage<br />
-                    5.Hosting<br />
-                   6 . Functions<br />
-                  7 . Machine Learning
+                    JSON Web Token is an open industry standard used to share information between two entities, usually a client (like your app s frontend) and a server (your apps backend).
                 </p>
             </div>
         </div>

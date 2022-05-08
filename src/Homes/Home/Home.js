@@ -8,7 +8,7 @@ import Products from '../Products/Products';
 const Home = () => {
     return (
         <div>
-            <h1>Home</h1>
+           
             <Banner></Banner>
             <Products></Products>
             <ExtraOne></ExtraOne>

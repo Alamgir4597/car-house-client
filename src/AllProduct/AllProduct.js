@@ -10,7 +10,7 @@ const AllProduct = () => {
     
     const navigate= useNavigate();
     const goAddNewProduct=()=>{
-        navigate('/add')
+        navigate('/addnewproduct')
     }
     const deleteProduct=(id)=>{
 console.log('delete btn clicked',id);
@@ -58,7 +58,7 @@ if(proceed){
                                     <td>{showAll.quantity}</td>
                                     <td>
                                          <Button  onClick={()=>deleteProduct(showAll._id)} className='mb-1'>delete</Button> <br/>
-                                        <Link to={`/add/${showAll._id}`}><Button>my item</Button></Link>
+                                        <Link to={`/add/${showAll._id}`}><Button>Add item</Button></Link>
 
                                      </td>
                                     
@@ -69,7 +69,7 @@ if(proceed){
                     </div>
                 </div>
             </div> )}
-            <Button >Add New Product</Button>
+            <Button onClick={goAddNewProduct} >Add New Product</Button>
         </div>
     );
 };

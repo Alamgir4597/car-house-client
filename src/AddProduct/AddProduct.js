@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import auth from '../firebase.init';
@@ -6,7 +6,7 @@ import useMyItem from '../MyItemHooks/MyItemHooks';
 
 const AddProduct = () => {
     const [user] = useAuthState(auth);
-   const {id}=useParams();
+  
     console.log(user)
     const handleSubmit=e=>{
         e.preventDefault();
@@ -18,8 +18,9 @@ const AddProduct = () => {
         const quantity = e.target.quantity.value;
         const supplier = e.target.supplier.value;
         const phone = e.target.phone.value;
-        const products={name,image,description,price,quantity,supplier};
-        fetch(`http://localhost:5000/product/${id}`,{
+        const products={email, name,image,description,price,quantity,supplier,phone};
+        
+        fetch('http://localhost:5000/order',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -32,17 +33,17 @@ const AddProduct = () => {
     return (
        
         <div className='container'>
-            <div className='w-50 mx-auto'>
+            <div >
 
-                <form onSubmit={handleSubmit} className='w-50 mx-auto'>
-                    <input type="text" name='email' placeholder={user.email} required readOnly></input> <br />
-                    <input type="text" name='name' placeholder='ProName' required></input> <br />
-                    <input type="text" name='image' placeholder='Image_Url' required></input>  <br />
-                    <input type="text" name='description' placeholder='short_description' required></input>  <br />
-                    <input type="text" name='price' placeholder='Price' required></input>  <br />
-                    <input type="number" name='quantity' placeholder='quantity' required></input>  <br />
-                    <input type="text" name='supplier' placeholder='supplier_Name' required></input>  <br />
-                    <input type="text" name='phone' placeholder='Phone_Number' required></input> <br />
+                <form onSubmit={handleSubmit} className='w-50 mx-auto' >
+                    <input type="text" name='email' placeholder={user.email} required /> <br />
+                    <input type="text" name='name' placeholder='ProName' required/> <br />
+                    <input type="text" name='image' placeholder='Image_Url' required/>  <br />
+                    <input type="text" name='description' placeholder='short_description' required/>  <br />
+                    <input type="text" name='price' placeholder='Price' required/>  <br />
+                    <input type="number" name='quantity' placeholder='quantity' required/>  <br />
+                    <input type="text" name='supplier' placeholder='supplier_Name' required/> <br />
+                    <input type="text" name='phone' placeholder='Phone_Number' required/><br />
 
                     <input type="submit" value='Add Product' />
                 </form>

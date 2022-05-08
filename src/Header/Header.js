@@ -29,6 +29,10 @@ const Header = () => {
                                     user ? <Link className='m-2 text-decoration-none text-light' to="/allproduct">All Product</Link>
                                     :null
                                } 
+                                {
+                                    user ? <Link className='m-2 text-decoration-none text-light' to="/myitem">My Items</Link>
+                                        : null
+                                } 
                                
                             </div>
 
@@ -37,7 +41,7 @@ const Header = () => {
                            
                             <Link className=' m-2 text-decoration-none text-light' to="/blogs">Blogs</Link>
                             {
-                             user ?  <Link className='m-2 text-decoration-none text-light' to="/add">Add Product</Link>
+                                user ? <Link className='m-2 text-decoration-none text-light' to="/addnewproduct">Add New Product</Link>
                                     : null
                             }
                             {
