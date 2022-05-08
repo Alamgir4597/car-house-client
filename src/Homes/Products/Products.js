@@ -16,19 +16,19 @@ const Products = () => {
     //         .then(res => res.json())
     //         .then(data => setProducts(data))
     // }, [])
-    Products.slice(0,6);
+   
     const navigate=useNavigate();
     const goAllProduct = () => {
         navigate('/allProduct')
     }
-
+    const sixItems=Products.slice(0, 6);
     return (
         <div className='container'>
             
 
             <div className='row' >
                 <h1 className='m-3'>Inventory</h1>
-                {Products.map(product => <Product key={product._id}
+                {sixItems.map(product => <Product key={product._id}
                 product={product}
                 ></Product>
                     
