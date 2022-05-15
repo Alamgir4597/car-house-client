@@ -20,7 +20,7 @@ const AddProduct = () => {
         const phone = e.target.phone.value;
         const products={email, name,image,description,price,quantity,supplier,phone};
         
-        fetch('http://localhost:5000/order',{
+        fetch('https://desolate-hamlet-80016.herokuapp.com/order',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

@@ -15,37 +15,45 @@ const Blogs = () => {
                     </p>
                 </div>
                 <div className='d-flex'>
-                    <h3>Node.js</h3>
-                    <p>
-                        1.Node.js is a server-side scripting language. <br />
-                        2.Node.js is a running environment or interpreter for the JavaScript programming language..<br />
-                        3.Node.js has a node package manager with over 500 modules and the ability to handle concurrent requests.
-                    </p>
+                   <div>
+                        <h3>Node.js</h3>
+                        <p>
+                            1.Node.js is a server-side scripting language. <br />
+                            2.Node.js is a running environment or interpreter for the JavaScript programming language..<br />
+                            3.Node.js has a node package manager with over 500 modules and the ability to handle concurrent requests.
+                        </p>
+                   </div>
                 </div>
 
             </div>
-            <div className='d-flex'>
+            <div >
                 <h1>sql and nosql difference</h1>
-                <div>
+                <div className='d-flex'>
                     
-                    <h3>Sql</h3>
+                  <div>
+                        <h3>Sql</h3>
 
-                    <p>1. Databases are categorized as Relational Database Management System (RDBMS).<br />
-                       2. As we already know SQL uses structured query language for its CRUD operation which is defined as SQL. <br/>
-                        3.SQL dbs is implemented in both open source and commercial Database such as like Postgres & MySQL as open source and Oracle and Sqlite as commercial.
+                        <p>1. Databases are categorized as Relational Database Management System (RDBMS).<br />
+                            2. As we already know SQL uses structured query language for its CRUD operation which is defined as SQL. <br />
+                            3.SQL dbs is implemented in both open source and commercial Database such as like Postgres & MySQL as open source and Oracle and Sqlite as commercial.
 
 
-                    </p>
+                        </p>
+                  </div>
                 </div>
                 <div>
-                    <h3>NoSql</h3>
+                   <div className='d-flex'>
+                       <div>
+                            <h3>NoSql</h3>
 
-                    <p>1.While NOSQL database is known as non-relational or distributed database.<br />
-                        2. oSQL database on other hand has dynamic schema for unstructured data.Data stored in this type of database is not structured and could be stored in either of forms such as document. <br />
-                        3.On other hand NOSQL is purely open source and MongoDB, BigTable, Redis, RavenDB.
+                            <p>1.While NOSQL database is known as non-relational or distributed database.<br />
+                                2. oSQL database on other hand has dynamic schema for unstructured data.Data stored in this type of database is not structured and could be stored in either of forms such as document. <br />
+                                3.On other hand NOSQL is purely open source and MongoDB, BigTable, Redis, RavenDB.
 
 
-                    </p>
+                            </p>
+                       </div>
+                   </div>
                 </div>
             </div>
             <div>

@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const Footer = () => {
@@ -13,6 +14,8 @@ const Footer = () => {
                         Email:<br/>
                         Facebook <br/>
                         twitter
+                        
+                     
                     </p>
                 </div>
             </div>

@@ -11,7 +11,7 @@ const Products = () => {
     const [Products, setProducts] = useProduct([]);
 
     // useEffect(() => {
-    //     const url =`http://localhost:5000/products`;
+    //     const url =`https://desolate-hamlet-80016.herokuapp.com/products`;
     //     fetch(url)
     //         .then(res => res.json())
     //         .then(data => setProducts(data))

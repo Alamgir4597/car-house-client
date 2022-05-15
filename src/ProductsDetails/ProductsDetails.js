@@ -10,7 +10,7 @@ const ProductsDetails = () => {
     const [ProductDls, setProductDls] = useState({});
     
     useEffect(()=>{
-        const url =`http://localhost:5000/product/${id}`;
+        const url =`https://desolate-hamlet-80016.herokuapp.com/product/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setProductDls(data))
@@ -20,11 +20,11 @@ const ProductsDetails = () => {
         // const moreNew=newqty-1;
         console.log(typeof (newqty));
         // console.log(typeof (moreNew));
-
+        
         const productQty = newqty;
         console.log(productQty)
 
-        fetch(`http://localhost:5000/product/${id}`, {
+        fetch(`https://desolate-hamlet-80016.herokuapp.com/product/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -37,15 +37,16 @@ const ProductsDetails = () => {
 
     const reStockHandle = (e) => {
         e.preventDefault();
-        let newqty = e.target.quantity.value;;
+        let newqty = parseInt( e.target.quantity.value);
         // const moreNew=newqty-1;
         console.log(typeof (newqty));
         // console.log(typeof (moreNew));
+        const getPrevValue = ProductDls.quantity;
+        console.log(typeof(getPrevValue));
+        const productQty = newqty + getPrevValue;
+        console.log(typeof(productQty))
 
-        const productQty = newqty;
-        console.log(productQty)
-
-        fetch(`http://localhost:5000/product/${id}`, {
+        fetch(`https://desolate-hamlet-80016.herokuapp.com/product/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -6,7 +6,7 @@ const MyItem = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/order')
+        fetch('https://desolate-hamlet-80016.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

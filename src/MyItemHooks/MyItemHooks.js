@@ -5,7 +5,7 @@ const useMyItem=(itemId)=>{
 
 
     useEffect(()=>{
-        const url = `http://localhost:5000/product/${itemId}`;
+        const url = `https://desolate-hamlet-80016.herokuapp.com/product/${itemId}`;
 fetch(url,)
 .then(res=> res.json())
 .then(data=>  setMyIetm(data))

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Toast } from 'react-bootstrap';
 
 const AddNewProduct = () => {
-
+    
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -15,7 +16,7 @@ const AddNewProduct = () => {
         
         const products = {  name, image, description, price, quantity, supplier};
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://desolate-hamlet-80016.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -23,7 +24,11 @@ const AddNewProduct = () => {
             body: JSON.stringify(products)
         })
             .then(res => res.json())
-            .then(data => console.log('success', data))
+            .then(data =>{
+                if (data.acknowledged === true){
+                    alert('Product add is Success')
+                }
+            })
     }
 
    

@@ -16,7 +16,7 @@ const AllProduct = () => {
 console.log('delete btn clicked',id);
 const proceed= window.confirm('Are You Want To Delete?');
 if(proceed){
-    fetch(`http://localhost:5000/product/${id}`, {
+    fetch(`https://desolate-hamlet-80016.herokuapp.com/product/${id}`, {
         method: 'DELETE'
     })
         .then(res => res.json())
@@ -39,12 +39,13 @@ if(proceed){
                         <table className="table table-image">
                             <thead>
                                 <tr>
-                                    <th scope="col">Day</th>
+                                    <th scope="col">id</th>
                                     <th scope="col">Image</th>
-                                    <th scope="col">Article Name</th>
-                                    <th scope="col">Author</th>
-                                    <th scope="col">Words</th>
-                                    <th scope="col">Shares</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">description</th>
+                                    <th scope="col">price</th>
+                                    <th scope="col">quantity</th>
+                                    <th scope="col">supplier</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,9 +54,11 @@ if(proceed){
                                     <td className="w-25">
                                         <img src={showAll.image} className="img-fluid img-thumbnail" alt="Sheep" />
                                     </td>
-                                    <td>Bootstrap 4 CDN and Starter Template</td>
-                                    <td>Cristina</td>
+                                    <td>{showAll.name}</td>
+                                    <td>{showAll.description}</td>
+                                    <td>{showAll.price}</td>
                                     <td>{showAll.quantity}</td>
+                                    <td>{showAll.supplier}</td>
                                     <td>
                                          <Button  onClick={()=>deleteProduct(showAll._id)} className='mb-1'>delete</Button> <br/>
                                         <Link to={`/add/${showAll._id}`}><Button>Add item</Button></Link>
